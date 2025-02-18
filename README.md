@@ -1,4 +1,4 @@
-# 📌 Portafolio Personal con Flask
+# 📌 Portfolio Personal con Flask
 
 Este es un proyecto de portafolio personal desarrollado con **Flask** y **Bootstrap**, que permite mostrar información personal, formación académica, experiencia laboral y proyectos realizados. Además, incluye funcionalidades para agregar, editar y eliminar proyectos dinámicamente.
 
