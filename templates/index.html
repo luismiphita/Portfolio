@@ -20,6 +20,16 @@
         .card {
             background: rgba(255, 255, 255, 0.9);
             color: #000;
+            height: 100%;
+        }
+        .card img {
+            height: 200px; /* Tamaño fijo para todas las imágenes */
+            object-fit: contain; /* Mostrar la imagen completa sin recorte */
+            width: 100%;
+        }
+        .card-body {
+            display: flex;
+            flex-direction: column;
         }
         .btn-primary, .btn-warning, .btn-danger {
             width: 100%;
@@ -107,10 +117,10 @@
             <div class="col-md-4">
                 <div class="card mb-4">
                     <img src="{{ url_for('static', filename='uploads/' + project[3]) }}" class="card-img-top" alt="{{ project[1] }}">
-                    <div class="card-body">
+                    <div class="card-body d-flex flex-column">
                         <h5 class="card-title">{{ project[1] }}</h5>
                         <p class="card-text">{{ project[2] }}</p>
-                        <div class="d-flex justify-content-between">
+                        <div class="mt-auto d-flex justify-content-between">
                             <form action="{{ url_for('delete', project_id=project[0]) }}" method="POST" style="display:inline;">
                                 <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
                             </form>
